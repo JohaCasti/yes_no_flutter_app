@@ -1,4 +1,5 @@
-import 'package:chats_yes_no_app/config/theme/app_theme.dart';
+import 'package:chats_yes_no_app/presentation/widgets/chat/my_message.dart';
+import 'package:chats_yes_no_app/presentation/widgets/chat/other_message.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -40,13 +41,14 @@ class _ChatView extends StatelessWidget {
           children: [
             Expanded(
               child: ListView.builder(
-                itemCount: 100, // Replace with actual message count
+                itemCount: 50, // Replace with actual message count
                 itemBuilder: (context, index) {
-                  return Text('Message $index');
+                  return (index % 2 == 0)
+                      ? const MyMessage()
+                      : const OtherMessage();
                 },
               ),
             ),
-
             Text('Hola mi amor, estoy bien y tu?'),
           ],
         ),
