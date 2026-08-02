@@ -1,5 +1,6 @@
 import 'package:chats_yes_no_app/presentation/widgets/chat/my_message.dart';
 import 'package:chats_yes_no_app/presentation/widgets/chat/other_message.dart';
+import 'package:chats_yes_no_app/presentation/widgets/shared/message_field_box.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -49,7 +50,8 @@ class _ChatView extends StatelessWidget {
                 },
               ),
             ),
-            Text('Hola mi amor, estoy bien y tu?'),
+            // caja de texto
+            MessageFieldBox(),
           ],
         ),
       ),
